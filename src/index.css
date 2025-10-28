@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 158 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 186 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 200 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 158 100% 50%;
+
+    --radius: 0.75rem;
+
+    --cyber-green: 158 100% 50%;
+    --cyber-cyan: 186 100% 50%;
+    --cyber-blue: 200 100% 50%;
+    --glow-green: 158 100% 50%;
+    --glow-cyan: 186 100% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 158 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 186 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 200 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 158 100% 50%;
+
+    --cyber-green: 158 100% 50%;
+    --cyber-cyan: 186 100% 50%;
+    --cyber-blue: 200 100% 50%;
+    --glow-green: 158 100% 50%;
+    --glow-cyan: 186 100% 50%;
+  }
+}
+
+@layer utilities {
+  .glow-green {
+    box-shadow: 0 0 20px hsla(var(--glow-green), 0.5);
+  }
+  
+  .glow-cyan {
+    box-shadow: 0 0 20px hsla(var(--glow-cyan), 0.5);
+  }
+  
+  .text-glow-green {
+    text-shadow: 0 0 10px hsla(var(--glow-green), 0.8);
+  }
+  
+  .text-glow-cyan {
+    text-shadow: 0 0 10px hsla(var(--glow-cyan), 0.8);
+  }
+  
+  .border-glow-green {
+    border-color: hsl(var(--cyber-green));
+    box-shadow: 0 0 10px hsla(var(--glow-green), 0.3);
+  }
+  
+  .border-glow-cyan {
+    border-color: hsl(var(--cyber-cyan));
+    box-shadow: 0 0 10px hsla(var(--glow-cyan), 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
